@@ -57,6 +57,7 @@ async function run() {
             res.send(result);
         });
 
+        // update
         app.patch('/orders/:id', async (req, res) => {
             const id = req.params.id;
             const status = req.body.status
@@ -70,6 +71,7 @@ async function run() {
             res.send(result);
         })
 
+        // delete
         app.delete('/orders/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
